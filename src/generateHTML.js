@@ -97,11 +97,13 @@ const generateHTML = (employee) => {
                                 </ul>
 
                             </div>
+
+                            ${newTeamMember}
                         </div>
                     </div>
                 </div>
 
-                ${newTeamMember}
+                
 
             </body>
 
