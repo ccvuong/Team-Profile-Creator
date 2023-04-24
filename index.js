@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = require('./genereateHTML');
+const generateHTML = require('./src/genereateHTML');
 
 // team info 
 const manager = require('./lib/manager');
@@ -109,32 +109,52 @@ const newIntern = [
 ];
 
 // function to start the app
-function init(){
+function init() {
     inquirer.createPromptModule(startQuestions).then(answers => {
 
         // selected manager role
-        if(answers.role === 'manager'){
+        if (answers.role === 'manager') {
             inquirer.prompt(newManager).then(answers => {
-                const manager = newManager(answers.name, answers.id, answers.email, answers.office);
-                answersArr.push(manager);
+
+                const manager = newManager(
+                    answers.name, 
+                    answers.id, 
+                    answers.email, 
+                    answers.office
+                    );
+
+                employee.push(manager);
                 init();
             })
         }
 
         // selected engineer role
-        if(answers.role === 'engineer'){
+        if (answers.role === 'engineer') {
             inquirer.prompt(newEngineer).then(answers => {
-                const engineer = newEngineer(answers.name, answers.id, answers.email, answers.github);
-                answersArr.push(engineer);
+
+                const engineer = newEngineer(
+                    answers.name, 
+                    answers.id, 
+                    answers.email, 
+                    answers.github
+                    );
+
+                employee.push(engineer);
                 init();
             })
         }
 
         // selcted intern role
-        if(answers.role === 'intern'){
+        if (answers.role === 'intern') {
             inquirer.prompt(newIntern).then(answers => {
-                const intern = newIntern(answers.name, answers.id, answers.email, answers.school);
-                answersArr.push(intern);
+
+                const intern = newIntern(answers.name, 
+                    answers.id, 
+                    answers.email, 
+                    answers.school
+                    );
+
+                employee.push(intern);
                 init();
             })
         }
