@@ -5,9 +5,9 @@ const fs = require('fs');
 const generateHTML = require('./src/genereateHTML');
 
 // team info 
-const manager = require('./lib/manager');
-const engineer = require('./lib/engineer');
-const intern = require('./lib/intern');
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
 
 // team array
 const employee = [];
@@ -18,7 +18,7 @@ const startQuestions = [
         type: 'list',
         name: 'role',
         message: 'Select the type of role for the employee.',
-        choices: ['manager', 'engineer', 'intern']
+        choices: ['Manager', 'Engineer', 'Intern']
     }
 ];
 
@@ -113,7 +113,7 @@ function init() {
     inquirer.prompt(startQuestions).then(answers => {
 
         // selected manager role
-        if (answers.role === 'manager') {
+        if (answers.role === 'Manager') {
             inquirer.prompt(newManager).then(answers => {
 
                 const manager = new Manager(
@@ -129,7 +129,7 @@ function init() {
         }
 
         // selected engineer role
-        if (answers.role === 'engineer') {
+        if (answers.role === 'Engineer') {
             inquirer.prompt(newEngineer).then(answers => {
 
                 const engineer = new Engineer(
@@ -145,10 +145,11 @@ function init() {
         }
 
         // selcted intern role
-        if (answers.role === 'intern') {
+        if (answers.role === 'Intern') {
             inquirer.prompt(newIntern).then(answers => {
 
-                const intern = new Intern(answers.name, 
+                const intern = new Intern(
+                    answers.name, 
                     answers.id, 
                     answers.email, 
                     answers.school
