@@ -99,12 +99,12 @@ const generateHTML = (employee) => {
                             </div>
 
                             ${newTeamMember}
+                            
                         </div>
                     </div>
                 </div>
 
                 
-
             </body>
 
             </html>`;
