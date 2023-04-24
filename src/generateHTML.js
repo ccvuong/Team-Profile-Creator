@@ -16,7 +16,9 @@ const generateHTML = (employee) => {
 
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item" id="id">ID: ${employee[i].id}</li>
-                        <li class="list-group-item" id="email"><a href="mailto:${employee[i].email}">Email: ${employee[i].email}</a></li>
+                        <li class="list-group-item" id="email"><a href="mailto:${employee[i].email}">
+                            Email: ${employee[i].email}</a>
+                            </li>
                         <li class="list-group-item" id="github"><a href="https://github.com/${employee[i].github}" target="_blank">Github: ${employee[i].github}</a></li>
                     </ul>
                 </div>`;
@@ -86,8 +88,12 @@ const generateHTML = (employee) => {
                             
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item" id="id">ID: ${employee[0].id}</li>
-                                    <li class="list-group-item" id="email"><a href="mailto:${employee[0].email}">Email: ${employee[0].email}</a></li>
-                                    <li class="list-group-item" id="officeNum">Office number: ${employee[0].officeNumber}</li>
+                                    <li class="list-group-item" id="email"><a href="mailto:${employee[0].email}">
+                                        Email: ${employee[0].email}</a>
+                                    </li>
+                                    <li class="list-group-item" id="officeNumber">
+                                        Office Number: ${employee[0].officeNumber}
+                                    </li>
                                 </ul>
 
                             </div>
@@ -95,12 +101,12 @@ const generateHTML = (employee) => {
                     </div>
                 </div>
 
-                    ${newTeamMember}
+                ${newTeamMember}
 
             </body>
 
             </html>`;
-}
+};
 
 
 module.exports = generateHTML;

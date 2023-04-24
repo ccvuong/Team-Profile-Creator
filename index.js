@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateHTML = require('./src/genereateHTML');
+const generateHTML = require('./src/generateHTML');
 
 // team info 
 const Manager = require('./lib/manager');
@@ -18,7 +18,7 @@ const startQuestions = [
         type: 'list',
         name: 'role',
         message: 'Select the type of role for the employee.',
-        choices: ['Manager', 'Engineer', 'Intern']
+        choices: ['Manager', 'Engineer', 'Intern', 'Finished']
     }
 ];
 
@@ -159,7 +159,20 @@ function init() {
                 init();
             })
         }
+        
+        if (answers.role === 'Finished') {
+            console.log(employee);
+            makeTeam();
+            return;
+          }
+        
     })
 };
 
 init();
+
+// generated HTML page
+function makeTeam() {
+    fs.writeFileSync('./dist/createdTeam.html', generateHTML(employee), "utf-8");
+    console.log('Team Generated')
+  };
