@@ -62,8 +62,8 @@ const generateHTML = (employee) => {
         
             <link rel="stylesheet" href="./style.css" />
             <script src="https://kit.fontawesome.com/3ff242710e.js" crossorigin="anonymous"></script>
-            <script src="https://kit.fontawesome.com/3ff242710e.js" crossorigin="anonymous"></script>
-            <title>The Team</title>
+            
+            <title>Blue Team</title>
             </head>
 
             <body>
