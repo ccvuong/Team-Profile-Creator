@@ -9,6 +9,8 @@ Build a ```Node.js command-line application``` that takes in information about e
 
 - [Demo 🔍](#demo)
 
+- [Preview 📷](#preview)
+
 - [Contributors 😎](#contributors)
 
 - [Licenses 🗒](#licenses)
@@ -40,6 +42,9 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 ## Demo
 (TBA)
+
+## Preview
+![team profile generator](https://user-images.githubusercontent.com/116984891/233924296-9a3f7cfd-6a4c-4a01-9051-3b8fdf27fb3f.png)
 
 
 ## Contributors
