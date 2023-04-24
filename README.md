@@ -41,11 +41,12 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 
 
 ## Demo
-(TBA)
+https://user-images.githubusercontent.com/116984891/233964114-6b58059b-6777-4e6e-bff6-a0d58a6652b1.mp4
+
+
 
 ## Preview
-![team profile generator](https://user-images.githubusercontent.com/116984891/233924296-9a3f7cfd-6a4c-4a01-9051-3b8fdf27fb3f.png)
-
+![team profile generator](https://user-images.githubusercontent.com/116984891/233964163-a4aa0712-73d2-402f-83ec-c78ebe3ef387.png)
 
 ## Contributors
 [😎 Christina Vuong ](https://github.com/ccvuong)
