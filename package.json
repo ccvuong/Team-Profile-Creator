@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ccvuong/Team-Profile-Creator/issues"
   },
-  "homepage": "https://github.com/ccvuong/Team-Profile-Creator#readme"
+  "homepage": "https://github.com/ccvuong/Team-Profile-Creator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }

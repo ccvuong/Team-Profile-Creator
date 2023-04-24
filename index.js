@@ -110,13 +110,13 @@ const newIntern = [
 
 // function to start the app
 function init() {
-    inquirer.createPromptModule(startQuestions).then(answers => {
+    inquirer.prompt(startQuestions).then(answers => {
 
         // selected manager role
         if (answers.role === 'manager') {
             inquirer.prompt(newManager).then(answers => {
 
-                const manager = newManager(
+                const manager = new Manager(
                     answers.name, 
                     answers.id, 
                     answers.email, 
@@ -132,7 +132,7 @@ function init() {
         if (answers.role === 'engineer') {
             inquirer.prompt(newEngineer).then(answers => {
 
-                const engineer = newEngineer(
+                const engineer = new Engineer(
                     answers.name, 
                     answers.id, 
                     answers.email, 
@@ -148,7 +148,7 @@ function init() {
         if (answers.role === 'intern') {
             inquirer.prompt(newIntern).then(answers => {
 
-                const intern = newIntern(answers.name, 
+                const intern = new Intern(answers.name, 
                     answers.id, 
                     answers.email, 
                     answers.school
