@@ -15,7 +15,7 @@ describe("getOfficeNum", () => {
   it("should return object's office number", () => {
     const officeNumber = new teamManager('John Smith', 1, 'johnsmith@gmail.com', 12);
 
-    expect(officeNumber.getOfficeNum()).toEqual(12);
+    expect(officeNumber.getOffice()).toEqual(12);
   })
 });
 

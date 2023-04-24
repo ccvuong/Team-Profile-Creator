@@ -16,7 +16,7 @@ describe("getGithub", () => {
   it("should return the object's github", () => {
     const github = new Engineer('John Smith', 1, 'johnsmith@gmail.com','johnsmithgit');
 
-    expect(github.getGithub()).toEqual('johnsmithgit');
+    expect(github.getGitHub()).toEqual('johnsmithgit');
   })
 });
 
